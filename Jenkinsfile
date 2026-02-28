@@ -31,10 +31,10 @@ pipeline {
                     git config --global user.email "akshai.hari@gmail.com"
                     git add deployment.yaml
                     git commit -m "Updated Deployment Manifest"
-                // """
-                // withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
-                //     sh "git push https://github.com/sastha97-coder/a-reddit-clone-gitops main"
-                // }
+                 """
+                 withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
+                     sh "git push https://github.com/sastha97-coder/a-reddit-clone-gitops main"
+                 }
          }
     }
 }
